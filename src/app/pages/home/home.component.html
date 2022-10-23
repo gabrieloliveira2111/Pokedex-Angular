@@ -1,0 +1,20 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let item of allPokemon; let index = index" class="col-sm-6 col-md-4 col-lg-3 mt-5">
+                <figure class="bg-light rounded" (click)="openModal(template, item)">
+                    <img [src]="item.imagem" class="img-fluid" />
+                </figure>
+                <div class="mx-lg-3">
+                    <p class="mx-1">
+                        {{item.id | idPokemon}}
+                    </p>
+                    <h3 class="mx-1">{{item.name | titlecase }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<ng-template #template>
+    <app-modal-pokemon [modalRef]="modalRef" [pokemon]="pokemon"></app-modal-pokemon>
+</ng-template>

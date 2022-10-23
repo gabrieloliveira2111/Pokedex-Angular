@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">{{pokemon.name | titlecase}} {{pokemon.id | idPokemon}}</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <figure>
+        <img [src]="pokemon.imagem" class="img-fluid" />
+    </figure>
+    <div class="row">
+        <span *ngFor="let item of pokemon.types" class="col-4 ms-3 rounded text-center">{{item.type.name |
+            titlecase}}</span>
+    </div>
+    <div>
+        {{pokemon.height}}
+    </div>
+    <div>
+        {{pokemon.weight}}
+    </div>
+    <div *ngFor="let atributtes of pokemon.stats">
+        {{atributtes.stat.name}} {{atributtes.base_stat}}
+    </div>
+</div>
