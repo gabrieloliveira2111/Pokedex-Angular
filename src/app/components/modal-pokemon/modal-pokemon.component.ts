@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { ModalPokemonService } from './modal-pokemon.service';
 import { IPokemon } from 'src/app/interfaces/pokemon';
 
 @Component({
@@ -12,5 +13,7 @@ export class ModalPokemonComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.pokemon.stats);
+  }
 }

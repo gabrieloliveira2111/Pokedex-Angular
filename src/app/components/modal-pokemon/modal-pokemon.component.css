@@ -1,0 +1,14 @@
+.atributtesBar {
+    background: linear-gradient(to left, #4cb8c4, #3cd3ad);
+    animation: 4s loader ease forwards;
+}
+@keyframes loader {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+  

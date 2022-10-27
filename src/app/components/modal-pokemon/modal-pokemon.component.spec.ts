@@ -8,9 +8,8 @@ describe('ModalPokemonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalPokemonComponent ]
-    })
-    .compileComponents();
+      declarations: [ModalPokemonComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ModalPokemonComponent);
     component = fixture.componentInstance;

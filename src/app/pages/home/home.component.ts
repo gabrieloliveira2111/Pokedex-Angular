@@ -10,6 +10,10 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class HomeComponent implements OnInit {
   allPokemon: IPokemon[] = [];
+  search: string = '';
+  modalRef?: BsModalRef;
+  pokemon!: IPokemon;
+
   constructor(
     private _homeServices: HomeService,
     private _modalService: BsModalService
@@ -29,11 +33,8 @@ export class HomeComponent implements OnInit {
       );
   }
 
-  modalRef?: BsModalRef;
-  pokemon!: IPokemon;
-
   openModal(template: TemplateRef<any>, item: IPokemon) {
     this.pokemon = item;
-    this.modalRef = this._modalService.show(template);
+    this.modalRef = this._modalService.show(template, { class: 'modal-xl' });
   }
 }
