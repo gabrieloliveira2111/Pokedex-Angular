@@ -1,1 +1,6 @@
-<p>evolutions works!</p>
+<div class="d-flex">
+    <div *ngFor="let item of listEvolution" class="">
+        <img [src]="item.imagem" alt="" class="w-50">
+        <span>{{item.name}}</span>
+    </div>
+</div>

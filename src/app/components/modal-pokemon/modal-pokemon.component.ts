@@ -13,7 +13,5 @@ export class ModalPokemonComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.pokemon.stats);
-  }
+  ngOnInit(): void {}
 }

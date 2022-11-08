@@ -26,11 +26,7 @@ export class HomeComponent implements OnInit {
   getPokemon() {
     this._homeServices
       .getPokemon()
-      .subscribe(
-        (pokemon: IResults) => (
-          (this.allPokemon = pokemon.results), console.log(this.allPokemon)
-        )
-      );
+      .subscribe((pokemon: IResults) => (this.allPokemon = pokemon.results));
   }
 
   openModal(template: TemplateRef<any>, item: IPokemon) {

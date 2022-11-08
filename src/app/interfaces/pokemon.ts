@@ -1,3 +1,9 @@
+export interface IPokemonResults {
+  count: number;
+  next: string;
+  previous: string | null;
+  results: IPokemon[];
+}
 export interface IResults {
   results: IPokemon[];
 }
@@ -26,4 +32,4 @@ export interface IStats {
 export interface IStat {
   name: string;
 }
-export type TStatus = "capturado" | "não capturado";
+export type TStatus = 'capturado' | 'não capturado';
